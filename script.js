@@ -1,14 +1,13 @@
 /* by: ZIMONH src: https://github.com/zimonh/Stars-Rank
 License: https://creativecommons.org/licenses/by-nc-sa/4.0/ */
 
-const makeStars = n =>{
+const makeStars = (n,starWidth) =>{
 
 	//Adjust settings here:
 	const
 		img_star 		= 'https://raw.githubusercontent.com/zimonh/Stars-Rank/master/fullstar.png',
 		img_emptystar 	= 'https://raw.githubusercontent.com/zimonh/Stars-Rank/master/emptystar.png',
-		maxStars = 5,
-		starWidth = 120; // css rank > star > halfstar > img width
+		maxStars = 5; // css rank > star > halfstar > img width
 
 
 	if(n <= maxStars){
