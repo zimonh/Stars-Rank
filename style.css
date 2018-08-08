@@ -1,0 +1,19 @@
+.rank > star > img,
+.rank > star > halfstar > img{ width:120px; /*  <==  should be the same as in script*/
+
+	height:auto;
+	position: absolute;
+}
+.rank > star > halfstar > img{position: relative;}
+.rank , star{height: 16px;} /*y position of stars*/
+star{
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	width: 130px; /*space between stars*/
+	}
+halfstar{
+	margin-left: 0.3px;
+	overflow: hidden;
+	position: absolute;
+}
