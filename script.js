@@ -16,7 +16,7 @@ const MakeStarSlider = inp => {
 		class="star-rank"
 		oninput="this.parentNode.querySelector('.rank').innerHTML =
 		makeStars({score:Number(this.value),maxstars:${inp.maxstars},id:'${inp.id}'});"
-		onchange="console.log(this.value);"">
+		onchange="scoreStars({score:Number(this.value),maxstars:${inp.maxstars},id:'${inp.id}'});">
 	</div>
 	<style>
 		#${inp.id}sub > .rank > star > halfstar > img,
@@ -45,11 +45,15 @@ const MakeStarSlider = inp => {
 
 
 
-
-const makeStars = inp =>{
+const scoreStars = inp =>{
 
 	//get the data here
-	if(!inp.init) console.log(inp.score,inp.maxstars,inp.id);
+	console.log(inp.score,inp.maxstars,inp.id);
+
+};
+
+
+const makeStars = inp =>{
 
 	//Adjust settings here:
 	const
