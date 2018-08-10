@@ -9,19 +9,19 @@
 	<title>Stars-Rank by ZIMONH</title>
 	<script type="application/javascript" src="script.js"></script>
 	<link rel="stylesheet" href="style.css">
+
 	<!-- by: ZIMONH src: https://github.com/zimonh/Stars-Rank
 	License: https://creativecommons.org/licenses/by-nc-sa/4.0/ -->
 
 </head>
 <body>
-<div class="rank" id="example"></div>
-<script>document.querySelector('#example').innerHTML = makeStars(3.5,120);</script>
-<br><br><br><br><br><br><br>
-<input
-	style="font-size: 33px"
-	placeholder="3.5"
-	type="range"
-	min="0" max="5" step="0.2"
-	onmouseup="document.querySelector('#example').innerHTML = makeStars(this.value,120);">
+
+<div id="example" ></div>
+<div id="example2" ></div>
+
+<script>
+MakeStarSlider({height:120,maxstars:5,id:'example'});
+MakeStarSlider({height:120,maxstars:5,id:'example2'});
+</script>
 </body>
 </html>

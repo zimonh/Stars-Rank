@@ -1,19 +1,46 @@
-.rank > star > img,
-.rank > star > halfstar > img{ width:120px; /*  <==  should be the same as in script*/
-
-	height:auto;
-	position: absolute;
-}
-.rank > star > halfstar > img{position: relative;}
-.rank , star{height: 16px;} /*y position of stars*/
-star{
-	display: inline-block;
-	position: relative;
-	text-align: left;
-	width: 130px; /*space between stars*/
+	.star-rank{
+		cursor: pointer;
+		margin: 0;
+		opacity:0;
+		position: absolute;
+		z-index: 1;
 	}
-halfstar{
-	margin-left: 0.3px;
-	overflow: hidden;
-	position: absolute;
-}
+
+	.rank{pointer-events: none;}
+
+	.rank > star > img,
+	.rank > star > halfstar > img{
+		height:auto;
+		position: absolute;
+		z-index:99;}
+
+	.rank > star > halfstar > img{position: relative;}
+
+	star{
+		display: inline-block;
+		position: relative;
+		text-align: left;}
+	input[type=range].star-rank {
+		-webkit-appearance: none;
+		position: relative;
+		top: 0;}
+
+	halfstar{
+		margin-left: 0;
+		overflow: hidden;
+		position: absolute;}
+
+	input[type=range].star-rank::-webkit-slider-runnable-track {
+		border: solid 1px black;
+		width: 100%;}
+	input[type=range].star-rank::-moz-range-track {
+		border: solid 1px black;
+		width: 100%;}
+	input[type=range].star-rank::-ms-track {
+		border: solid 1px black;
+		width: 100%;}
+	input[type=range].star-rank::-ms-thumb { width: 1px; }
+	input[type=range].star-rank::-moz-range-thumb { width: 1px; }
+	input[type=range].star-rank::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 1px;}
