@@ -4,6 +4,9 @@
 <img src="example.gif"/>
 
 ## How to use
+Add the script.js
+Add the style.css
+Add this to your page:
 ```
 <div id="example" ><!--stars slider goes here--></div>
 
