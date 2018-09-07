@@ -1,8 +1,9 @@
 /* by: ZIMONH src: https://github.com/zimonh/Stars-Rank
 License: https://creativecommons.org/licenses/by-nc-sa/4.0/ */
 
-
 const MakeStarSlider = inp => {
+	let score = inp.maxstars / 2;
+	if(inp.score !== undefined) score = inp.score;
 
 	let	ff = '';
 	if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) 	ff = '+ 10% - 10px';
@@ -11,6 +12,7 @@ const MakeStarSlider = inp => {
 <div id="${inp.id}sub" >
 	<div class="rank" ></div>
 	<input
+		val="${score}"
 		type="range"
 		min="0" max="${inp.maxstars}" step=".1"
 		class="star-rank"
@@ -40,7 +42,7 @@ const MakeStarSlider = inp => {
 		#${inp.id}sub > input[type=range].star-rank { margin: calc(${(inp.height/43)-5}px - 1.5% ) 0 0 0; }
 		}
 		#${inp.id}sub{width: ${inp.height*inp.maxstars}px}</style>`;
-	document.querySelector(`#${inp.id} .rank`).innerHTML = makeStars({score:2.5,maxstars:inp.maxstars,init:true});};
+	document.querySelector(`#${inp.id} .rank`).innerHTML = makeStars({score:score,maxstars:inp.maxstars,init:true});};
 
 
 
